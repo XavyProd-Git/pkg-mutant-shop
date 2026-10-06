@@ -1,0 +1,168 @@
+{
+  "_README": [
+    "THE PART OF THE CATALOGUE THAT CANNOT BE DERIVED FROM A FILE.",
+    "",
+    "tools/gen_payload_catalog.py walks the owner's folder and reads out of the files themselves",
+    "everything a file can tell you: platform (from the folder), size, sha256, and for a package its",
+    "title, title id, content id and version straight out of param.sfo/param.json. What a file CANNOT",
+    "tell you is which port proves it is running, whether it is safe to start unattended, and which",
+    "GitHub project it came from. Guessing any of those has already cost this project real time:",
+    "ShadowMount was listed at port 9021 (which belongs to elfldr and is always bound), so the",
+    "'is it already up?' test was permanently true and it was never actually started for months.",
+    "",
+    "So those three facts are written down here, by hand, once, with a reason each. An id that is not",
+    "in this file still appears in the panel - it just has no port, no upstream and a neutral state,",
+    "which is the honest answer rather than a green light nobody can back.",
+    "",
+    "FIELDS",
+    "  title      what the panel calls it. Absent - the folder name is used.",
+    "  blurb      one plain sentence. Shown under the title.",
+    "  port       the TCP port that PROVES it is running, and on the PS5 it doubles as the",
+    "             auto-start rule in payload_bundle.h: >0 means 'start at boot if that port is free'.",
+    "             Absent or 0 means there is nothing to observe - the tile says so instead of lying.",
+    "  autostart  may the console start this by itself at boot? Only ever true for a payload that",
+    "             provides a service and touches nothing underneath it.",
+    "  layer      'jailbreak' marks a payload that changes the jailbreak layer. Those are never",
+    "             auto-started and the panel warns before loading one. payload_bundle.h already",
+    "             states the rule: that is the owner's call to make, never a side effect of ours.",
+    "  repo       owner/name on GitHub, for the release check. SHOWN ON THE TILE, because several of",
+    "             these names have more than one fork and pointing an updater at the wrong fork would",
+    "             put someone else's build on the console. Visible is fixable; silent is not.",
+    "  asset      substring that picks this file out of a release's asset list.",
+    "  ours       true for our own artifacts. They are listed but never embedded as a copy of",
+    "             ourselves - that is the recursion ps4-app/build-all-wsl.sh exists to prevent.",
+    "",
+    "CONTENT, NOT FILENAME (3.84.0). A file can be renamed - the owner said so plainly - so identity",
+    "must come from what is INSIDE it:",
+    "  marker   a byte string that appears in this project's binary and in no other one here. The",
+    "           catalogue matches on this first, so ftpsrv-ps5.elf renamed to anything at all is still",
+    "           recognised as ftpsrv, with its port, its upstream and its warnings intact.",
+    "  ver_re   a regex with one group that reads the version OUT of the binary. kstuff, Payload",
+    "           Manager and the WebKit installer all carry theirs; the rest do not, and for those the",
+    "           filename is the only source - which the catalogue records as version_from so the panel",
+    "           never presents a guess as a fact.",
+    "",
+    "  probe    how to test `port`. Absent means a TCP connect. \"udp\" means the console tries to BIND",
+    "           the port instead - the only test that works for a service which listens on UDP and",
+    "           answers nobody, which is exactly what nanodns does."
+  ],
+  "payloads": {
+    "ftpsrv": {
+      "title": "FTP server",
+      "blurb": "Serves the console's filesystem over FTP, which is how files are moved on and off it.",
+      "port": 2121,
+      "autostart": true,
+      "repo": "drakmor/ftpsrv",
+      "asset": "ftpsrv",
+      "marker": "220-Welcome to ftpsrv"
+    },
+    "nanodns": {
+      "title": "nanodns",
+      "blurb": "A tiny DNS server, used to point the console away from Sony's update servers.",
+      "port": 53,
+      "autostart": false,
+      "repo": "drakmor/nanoDNS",
+      "asset": "nanodns",
+      "note_port": "Answers on UDP 53. A TCP connect proves nothing and a DNS query from the LAN gets no reply even when it IS running (measured on both consoles), so the console tests it by trying to BIND that port: if the bind is refused, something already holds it.",
+      "marker": "nanodns",
+      "probe": "udp"
+    },
+    "kstuff": {
+      "title": "kstuff",
+      "blurb": "Part of the jailbreak itself. Already running if your console is jailbroken.",
+      "port": 0,
+      "autostart": false,
+      "layer": "jailbreak",
+      "repo": null,
+      "asset": "kstuff",
+      "marker": "Kstuff Lite",
+      "ver_re": "Welcome To Kstuff Lite ([0-9][0-9.]*)"
+    },
+    "shadowmountplus": {
+      "title": "ShadowMountPlus",
+      "blurb": "Mounts game backups from a drive so the console can see them as installed games.",
+      "port": 10101,
+      "autostart": true,
+      "repo": "drakmor/ShadowMountPlus",
+      "asset": "shadowmount",
+      "note_port": "10101, NOT 9021. It announces its own listener: http://127.0.0.1:10101/api/v1",
+      "marker": "ShadowMount"
+    },
+    "pldmgr": {
+      "title": "Payload Manager",
+      "blurb": "Loads other payloads, and the only thing that can start one for us. Leave it running.",
+      "port": 8084,
+      "autostart": false,
+      "repo": "itsPLK/ps5-payload-manager",
+      "asset": "pldmgr",
+      "note_autostart": "Never auto-started: it is what starts things, and relaunching a live loader is how installs get wedged.",
+      "marker": "Payload Manager v",
+      "ver_re": "Payload Manager v([0-9][0-9.]*)"
+    },
+    "onionhen": {
+      "title": "OnionHEN",
+      "blurb": "A homebrew enabler. Changes the jailbreak layer, so it is yours to start, not ours.",
+      "port": 0,
+      "autostart": false,
+      "layer": "jailbreak",
+      "repo": "aydencharles/onionHEN",
+      "asset": "onionhen",
+      "marker": "OnionHEN"
+    },
+    "webkit-autoloader-installer": {
+      "title": "WebKit autoloader installer",
+      "blurb": "Installs the autoloader onto the home screen, so the console can re-jailbreak itself.",
+      "port": 0,
+      "autostart": false,
+      "layer": "jailbreak",
+      "repo": "itsPLK/ps5-webkit-autoloader",
+      "asset": "installer",
+      "marker": "WebKit Autoloader",
+      "ver_re": "/app/([0-9][0-9.]*)/relapse"
+    },
+    "pkg-mutant-shop": {
+      "title": "PKG MUTANT SHOP",
+      "blurb": "This app. Listed so you can send it to a console that has just been jailbroken.",
+      "port": 8710,
+      "autostart": false,
+      "ours": true,
+      "repo": "XavyProd-Git/pkg-mutant-shop",
+      "asset": "pkg-mutant-shop",
+      "marker": "PKG MUTANT SHOP",
+      "ver_re": "var APP_VERSION=\"([0-9][0-9.]*)\""
+    }
+  },
+  "homebrews": {
+    "ITEM00001": {
+      "title": "Itemzflow Game Manager",
+      "blurb": "A game launcher and manager that runs on the console itself.",
+      "repo": "LightningMods/Itemzflow",
+      "asset": "ITEM00001"
+    },
+    "LAPY20009": {
+      "title": "PS4-Xplorer",
+      "blurb": "A file browser for the PS4, with FTP and package installing built in.",
+      "repo": null,
+      "asset": "XPLORER"
+    },
+    "MOUU12023": {
+      "title": "Internet Browser",
+      "blurb": "Puts a browser on the home screen, so the console can reach a page without a PC.",
+      "repo": null,
+      "unrecognised_format": true,
+      "note_format": "Begins \\x7fFIH, not a package header this app reads. Its name comes from the param.json inside it, and the console decides whether it installs."
+    },
+    "PKGI13337": {
+      "title": "FPKGi",
+      "blurb": "Browses and installs packages from a list you host yourself.",
+      "repo": null,
+      "asset": "FPKGi"
+    },
+    "PPSA99169": {
+      "title": "RetroArch",
+      "blurb": "The emulator front-end. A folder-shaped app, so it goes down the backup lane, not the package one.",
+      "repo": null,
+      "note_shape": "PPSA99169 is an extracted app folder (eboot.bin + sce_sys/param.json + assets), which is what ShadowMountPlus mounts. It is not a .pkg and must never be sent down the package lane."
+    }
+  }
+}
