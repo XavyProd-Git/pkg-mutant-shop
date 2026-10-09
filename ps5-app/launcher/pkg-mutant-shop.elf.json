@@ -1,0 +1,16 @@
+{
+  "_note": "LEGACY (marked 2026-09-04) - nothing reads this file. It was a launcher-list entry for the v0.17 notify payload (ps5-app/payload/pkg-mutant-shop.elf), which is not built or shipped. The shop is PKG-MUTANT-SHOP.elf, loaded by Payload Manager from /data/pldmgr/payloads/PKG-MUTANT-SHOP/. Kept for the record; see SETUP.md.",
+  "name": "PKG MUTANT SHOP",
+  "filename": "pkg-mutant-shop.elf",
+  "url": "",
+  "source": "",
+  "source_direct": "",
+  "description": "Homebrew PKG store \u2014 opens PKG MUTANT SHOP in the PS5 browser",
+  "last_update": "",
+  "version": "0.17",
+  "checksum": "",
+  "downloaded_at": "2026-07-22T07:45:00+0100",
+  "install_source": "pkg-mutant-shop",
+  "install_source_detail": "companion",
+  "source_name": "PKG MUTANT SHOP"
+}

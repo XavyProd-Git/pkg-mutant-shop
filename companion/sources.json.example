@@ -1,0 +1,23 @@
+{
+  "_note": "OPTIONAL. Two ways to extend where games come from:",
+  "_note_1": "1) Add MIRRORS in config.json under 'sources' (recommended) - the engine auto-picks the fastest.",
+  "_note_2": "2) List REMOTE-HOSTED titles here under 'games' (same shape as /api/library). Use when a title is NOT in your local folders but lives on a mirror. Copy to sources.json to activate.",
+
+  "games": [
+    {
+      "title_id": "CUSA00000",
+      "name": "Example Remote Title",
+      "region": "US",
+      "platform": "PS4",
+      "size": 20000000000,
+      "cover_seed": "example",
+      "has_icon": false,
+      "base": [
+        { "install_key": null, "file": "Example [CUSA00000].pkg", "size": 20000000000, "kind": "base", "version": "1.00", "name": "Example", "title_id": "CUSA00000" }
+      ],
+      "updates": [],
+      "dlc": [],
+      "cheats": []
+    }
+  ]
+}
