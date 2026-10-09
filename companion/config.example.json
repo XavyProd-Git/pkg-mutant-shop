@@ -1,0 +1,84 @@
+{
+  "_comment": "TEMPLATE. The app never reads this file. start.cmd copies it to companion/config.json the first time; the exe writes its own config.json beside itself (the folder PKG-MUTANT-SHOP.exe is in). load_config() merges DEFAULT_CONFIG (companion/server.py) with that one file and nothing else, so this mirrors DEFAULT_CONFIG exactly: an unedited copy changes nothing, and deleting a key from config.json falls back to DEFAULT_CONFIG. Forward slashes even on Windows. Keys the app no longer reads (dpi.mode/host/port_v2/port_v1/port_ezremote/auto_reload/live_probe, consoles[].dpi_port) are deliberately absent.",
+  "_ps5_ip": "Set ps5_ip to the console's address, or leave it: the app discovers a PS5 on the LAN by asking /api/health for on_console:true and writes what it finds.",
+  "_consoles_example": [
+    {
+      "id": "living",
+      "name": "Living Room",
+      "ip": "192.168.1.50",
+      "ftp_port": 2121
+    }
+  ],
+  "ps5_ip": "192.168.1.50",
+  "consoles": [],
+  "dpi": {
+    "pldmgr_port": 8084
+  },
+  "ftp": {
+    "port": 2121
+  },
+  "console": {
+    "app_db_path": "/system_data/priv/mms/app.db",
+    "notify_port": 9099
+  },
+  "shadowmount": {
+    "port": 10101,
+    "scan_path": "/data/homebrew",
+    "scan_paths_by_drive": {}
+  },
+  "cheats": {
+    "root": "/data/cheatrunner"
+  },
+  "install": {
+    "ftp_dest": "/data/pkg"
+  },
+  "library": {
+    "local_paths": [
+      "C:/Mutant Games"
+    ],
+    "sources_file": "sources.json",
+    "serve_local_over_http": true
+  },
+  "sources": [],
+  "queue": {
+    "max_parallel": 2,
+    "allow_parallel_per_console": false
+  },
+  "companion": {
+    "host": "0.0.0.0",
+    "port": 8710
+  },
+  "drives": [
+    "internal",
+    "ext0",
+    "ext1",
+    "usb0",
+    "usb1",
+    "usb2",
+    "usb3",
+    "usb4",
+    "usb5",
+    "usb6",
+    "usb7"
+  ],
+  "maintenance": {
+    "auto_rescan": true,
+    "rescan_interval_sec": 10,
+    "rescan_settle_sec": 3,
+    "temp_sweep_age_sec": 3600
+  },
+  "performance": {
+    "serve_chunk_bytes": 1048576
+  },
+  "integrity": {
+    "enabled": true,
+    "verify_before_install": true,
+    "on_local_corrupt": "warn"
+  },
+  "federation": {
+    "enabled": false,
+    "name": "",
+    "peers": []
+  },
+  "content_ownership_ack": false
+}

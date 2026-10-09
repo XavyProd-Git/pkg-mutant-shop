@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File generated from: /home/runner/work/PS-Game-Patch/PS-Game-Patch/patches/xml/TheEvilWithin-Orbis.xml @ 2026-07-12 10:58:36 Sunday (UTC +0000) -->
+<Patch>
+    <TitleID>
+        <ID>CUSA00203</ID>
+    </TitleID>
+    <Metadata Title="The Evil Within"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00637ce3" Value="0x00"/>
+        </PatchList>
+    </Metadata>
+</Patch>

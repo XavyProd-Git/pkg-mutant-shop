@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the runbook first
+    url: https://github.com/XavyProd-Git/pkg-mutant-shop/blob/master/SETUP.md
+    about: Ports, config keys, adding a second PC, and triage for the usual problems.
+  - name: How it all fits together
+    url: https://github.com/XavyProd-Git/pkg-mutant-shop/blob/master/ARCHITECTURE.md
+    about: The three artifacts, the install lane, the ports, and what "installed" actually means.
