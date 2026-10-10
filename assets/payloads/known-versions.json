@@ -1,0 +1,85 @@
+{
+  "_README": [
+    "VERSIONS THIS APP HAS PROVEN, KEYED BY THE FILE'S OWN sha256.",
+    "",
+    "Some payloads write no version into their binary and none into their filename - ftpsrv, nanodns,",
+    "ShadowMountPlus and OnionHEN are all like that - so the catalogue would have to show a blank where",
+    "a version belongs. But when the file on disk is byte-for-byte the size of an asset in an upstream",
+    "release, it IS that release, and that is evidence rather than a guess.",
+    "",
+    "The running app makes that comparison whenever it checks for updates, and writes what it learned",
+    "here. The generator then stamps it into the catalogue, so the answer ships inside both ELFs and is",
+    "there on a console with no PC and no internet - which is where a version is least guessable and",
+    "most wanted. The key is the sha256, so a different build of the same project never inherits it.",
+    "",
+    "Nothing here is hand-written and nothing needs to be. Delete a line and the app will learn it",
+    "again the next time it checks."
+  ],
+  "versions": {
+    "fba508465a8c892882e88e2834ac2b6c445583b81629257764725528f3f5fd6a": {
+      "version": "1.16-ng-stable",
+      "from": "drakmor/ftpsrv",
+      "asset": "ftpsrv-ps4.elf"
+    },
+    "aa7e9d94e32ef866e40844146330028329f8a8a529244e2ecc319ff9d8b0f5f9": {
+      "version": "0.4",
+      "from": "drakmor/nanoDNS",
+      "asset": "nanodns-ps4.elf"
+    },
+    "f19ae469b25453a7a4af4529527521d31f143100f18a2c6839666e7121c8bd32": {
+      "version": "1.16-ng-stable",
+      "from": "drakmor/ftpsrv",
+      "asset": "ftpsrv-ps5.elf"
+    },
+    "fcfb7d47c3b295560ea1603dc015f7c4950353ef0faca16428bd425680ef1fc5": {
+      "version": "0.4",
+      "from": "drakmor/nanoDNS",
+      "asset": "nanodns.elf"
+    },
+    "3f716a7b2220c7e87e87452ae05cad689ef842d3beb4cdad6c526cb6dfc2b6b5": {
+      "version": "1.7beta2",
+      "from": "drakmor/ShadowMountPlus",
+      "asset": "shadowmountplus.elf"
+    },
+    "aa3f98847948e2ae8ea600c3f437e28247a0a4f8b73651a046d2859924bf97b3": {
+      "version": "v0.0.13",
+      "from": "aydencharles/onionHEN",
+      "asset": "OnionHEN.elf"
+    },
+    "2a7427e20ba7a70bd8cd01e47eb00ee7ca82db82dff3da7884f48f9c3fcbe95a": {
+      "version": "1.7beta3",
+      "from": "drakmor/ShadowMountPlus",
+      "asset": "shadowmountplus.elf"
+    },
+    "c587a0e92158d0a64f1c78e10a9743709b3ab194bee2d4cf8ffdd3147c3a7530": {
+      "version": "v0.9.0-beta1",
+      "from": "aydencharles/onionHEN",
+      "asset": "OnionHEN.elf"
+    },
+    "fc4e5f715e76660ce34bde2adb10eaf1d069cb2cdf06f7a380896dfb62bd0c4a": {
+      "version": "1.7beta4",
+      "from": "drakmor/ShadowMountPlus",
+      "asset": "shadowmountplus.elf"
+    },
+    "a6de0af1d2b427cad5f69a32203407115d91b71e8291f92acf2545a5850a7600": {
+      "version": "v2.5",
+      "from": "elripalda/Porpoise-Dolphin-Emulator-for-PS5",
+      "asset": "Porpoise-2.5.zip"
+    },
+    "7eb4e599c2be96fc835874969788a7aca5c81d6d33a5228bf414ad031d535cfa": {
+      "version": "vk-285-130",
+      "from": "Swordpdf/PS5SX2",
+      "asset": "PS5SX2-vk-285-130.zip"
+    },
+    "66260113cd7806426689ec19489a4f2c363ee6b99db50d43766d109ba94ce7e6": {
+      "version": "Alpha-2",
+      "from": "ZiZc3/XPSemu",
+      "asset": "PPSA97358.zip"
+    },
+    "dd2e78af126d9d115df147a0f2bff6269de7a3eee5a556e06b6c21726a36f087": {
+      "version": "v0.9.0-beta2",
+      "from": "aydencharles/onionHEN",
+      "asset": "OnionHEN.elf"
+    }
+  }
+}

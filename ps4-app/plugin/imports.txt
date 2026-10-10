@@ -1,0 +1,61 @@
+# The in-game module's COMPLETE import set, one name per line, sorted.
+#
+# WHY THIS FILE EXISTS. An import the game's libraries cannot resolve - or cannot safely be CALLED
+# inside a game - is what broke this module for weeks, so its import set is not allowed to move by
+# accident. It moved by accident once already: a one-byte fwrite() of a newline was compiled into
+# fputc(), silently adding a symbol nobody chose. The plugin build diffs the module against this list
+# and aborts on any difference.
+#
+# ## WHAT WAS MEASURED ON THE CONSOLE, 2026-09-26
+#
+#   * PMS_AGENT_NULL - plugin_load sets a global and returns, ZERO undefined symbols: Dark Souls II
+#     LOADED AND PLAYED, and GoldHEN announced the plugin on screen. So the module format, the
+#     signing, the crt, the paid, the SDK version and the whole build recipe are FINE, and nothing
+#     from GoldHEN's SDK is needed. Stop re-checking those.
+#   * PMS_AGENT_MINIMAL - the same build plus fopen/fwrite/fclose, called from plugin_load: CRASHED.
+#   * the file-channel agent, calling the same stdio from a worker thread six seconds in: CRASHED.
+#
+# So LIBC STDIO is what breaks this module inside a game, and every file operation is now a
+# sceKernel* call. What had misled us: game_patch imports fprintf, getc, putc and the stderr FILE
+# object, which reads like "the FILE machinery resolves inside a game" - but game_patch does its
+# actual file work with sceKernelOpen/Read/Write/Close/Lseek/Mkdir and never calls fopen. Those are
+# two different claims and only the first was ever evidenced.
+#
+# ## THE NAMES BELOW, AND WHAT IS KNOWN ABOUT EACH
+#
+# PROVEN by game_patch, a plugin this console loads cleanly that does real file work:
+#     sceKernelOpen, sceKernelRead, sceKernelWrite, sceKernelClose, sceKernelLseek,
+#     sceKernelGetModuleInfo, sceKernelGetModuleList
+# PROVEN by plugin_template: memset, snprintf
+# NOT individually evidenced, and kept because the zero-import build proved the loader is not the
+# problem and these are all off the load path or trivially safe:
+#     memcpy, getpid, sceKernelUsleep, sceKernelMprotect, scePthreadCreate, scePthreadDetach
+# THE ONE STILL WORTH SUSPECTING FIRST if a load ever fails again:
+#     sceKernelGetAppInfo - NID G-MYv5erXaU, in NEITHER plugin whose imports were decoded, and
+#     GoldHEN's own SDK reaches a title id through orbis_syscall(500) instead. It no longer runs on
+#     the game's load path (the worker calls it after its delay), and the shop already knows the
+#     running title, so it can be dropped outright if it is ever implicated.
+#
+# GONE, and not to be reintroduced: fopen, fread, fwrite, fclose, fgetc, remove (libc stdio, the
+# measured cause) and rename (the one name nothing on this console demonstrated - no longer needed,
+# because a response is written straight into place and the reader rejects an incomplete one by the
+# length declared in its own header). sceKernelUnlink is deliberately NOT used either, although it
+# exists: a file is emptied with O_TRUNC instead, which needs no symbol game_patch lacks.
+#
+# To change this list DELIBERATELY, edit it in the same commit as the code that needs it, and say why.
+getpid
+memcpy
+memset
+sceKernelClose
+sceKernelGetAppInfo
+sceKernelGetModuleInfo
+sceKernelGetModuleList
+sceKernelLseek
+sceKernelMprotect
+sceKernelOpen
+sceKernelRead
+sceKernelUsleep
+sceKernelWrite
+scePthreadCreate
+scePthreadDetach
+snprintf

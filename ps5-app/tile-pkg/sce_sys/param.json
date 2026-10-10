@@ -1,0 +1,24 @@
+{
+    "applicationCategoryType": 65536,
+    "applicationDrmType": "free",
+    "attribute": 1,
+    "attribute2": 0,
+    "attribute3": 4,
+    "contentBadgeType": 2,
+    "contentId": "IV0000-PKGM00001_00-PKGMUTANTSHOP001",
+    "contentVersion": "01.000.000",
+    "deeplinkUri": "http://127.0.0.1:8710/",
+    "displayLocation": 188,
+    "downloadDataSize": 0,
+    "localizedParameters": {
+        "defaultLanguage": "en-US",
+        "en-US": {
+            "titleName": "PKG MUTANT SHOP"
+        }
+    },
+    "masterVersion": "01.00",
+    "pubtoolInfo": "homebrew",
+    "requiredSystemVersion": "01.000.000",
+    "titleId": "PKGM00001",
+    "versionFileUri": ""
+}
