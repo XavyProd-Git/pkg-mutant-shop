@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File generated from: /home/runner/work/PS-Game-Patch/PS-Game-Patch/patches/xml/Back4Blood.xml @ 2026-07-12 10:58:36 Sunday (UTC +0000) -->
+<Patch>
+    <TitleID>
+        <ID>CUSA14253</ID>
+    </TitleID>
+    <Metadata Title="Back 4 Blood"
+              Name="60 FPS"
+              Author="Jao"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03c61313" Value="31f6"/>
+            <Line Type="bytes" Address="0x03c70456" Value="31f6"/>            
+        </PatchList>
+    </Metadata>
+</Patch>

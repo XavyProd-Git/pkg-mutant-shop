@@ -1,0 +1,309 @@
+{
+ "BrinooTk/PS5X360": {
+  "assets": [
+   {
+    "digest": "687b86430efcfb9db9ba626455bb216c628b8b0ff0db20583a6838cc49a69701",
+    "name": "Kinect-Phone.zip",
+    "size": 20680,
+    "url": "https://api.github.com/repos/BrinooTk/PS5X360/releases/assets/621774493"
+   },
+   {
+    "digest": "0cb09bf19ce9314408f1e8b9beb67bba3c4756406ad716dc03f7b6b3e636ba33",
+    "name": "PPSA50011.zip",
+    "size": 24322568,
+    "url": "https://api.github.com/repos/BrinooTk/PS5X360/releases/assets/621774495"
+   },
+   {
+    "digest": "5da64c23263e6868696aa0f8b1bfd0eb97581bae73124d08066b507652adfbfb",
+    "name": "PS5X360-AutoLog-v1.0.9-preview.elf",
+    "size": 941920,
+    "url": "https://api.github.com/repos/BrinooTk/PS5X360/releases/assets/621774497"
+   },
+   {
+    "digest": "b4557a9221dbb3958a7b97538302d05e883d959eff87f4a3e07834de3ce0f39d",
+    "name": "PS5X360-source-0.5.8-fix1.zip",
+    "size": 176342439,
+    "url": "https://api.github.com/repos/BrinooTk/PS5X360/releases/assets/621774494"
+   }
+  ],
+  "page": "https://github.com/BrinooTk/PS5X360/releases/tag/v0.5.8-fix1",
+  "prerelease": false,
+  "published": "2026-10-08",
+  "tag": "v0.5.8-fix1"
+ },
+ "LightningMods/Itemzflow": {
+  "assets": [],
+  "page": "https://github.com/LightningMods/Itemzflow/releases/tag/1.08",
+  "prerelease": false,
+  "published": "2026-05-31",
+  "tag": "1.08"
+ },
+ "Swordpdf/PS5SX2": {
+  "assets": [
+   {
+    "digest": "7780c568edffe517cb282f7b33a0af1d49f9f025e122dcf2f77b841880c43046",
+    "name": "PS5SX2-vk-285-139.zip",
+    "size": 18003923,
+    "url": "https://api.github.com/repos/Swordpdf/PS5SX2/releases/assets/622757264"
+   },
+   {
+    "digest": "6b1be3ea24ec8144b27b2a1f3e279cd17574f3093e9431abf8579dcc6c0bfae9",
+    "name": "PS5SX2Installer.elf",
+    "size": 1196432,
+    "url": "https://api.github.com/repos/Swordpdf/PS5SX2/releases/assets/622757261"
+   },
+   {
+    "digest": "737d95a8a1545447c4166b094005704465e420f79f54e882e30e7f9e4cde6210",
+    "name": "PS5SXHelper.elf",
+    "size": 1052384,
+    "url": "https://api.github.com/repos/Swordpdf/PS5SX2/releases/assets/622757260"
+   }
+  ],
+  "page": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-139",
+  "prerelease": false,
+  "published": "2026-10-08",
+  "tag": "vk-285-139"
+ },
+ "XavyProd-Git/pkg-mutant-shop": {
+  "assets": [
+   {
+    "digest": "069830ce88983ba2ca39168ac3aeaca5f84b013d2d81790d69eea7882e8764cb",
+    "name": "PKG-MUTANT-SHOP-3.97.0.zip",
+    "size": 66472710,
+    "url": "https://api.github.com/repos/XavyProd-Git/pkg-mutant-shop/releases/assets/623195557"
+   },
+   {
+    "digest": "3033d6155f10438905a7072ec549dd49608b2c4a51b16187a62f351ec17a58fc",
+    "name": "PKG-MUTANT-SHOP-PS4.elf",
+    "size": 9638384,
+    "url": "https://api.github.com/repos/XavyProd-Git/pkg-mutant-shop/releases/assets/623195562"
+   },
+   {
+    "digest": "541419eef5a54ffbb4c6d58b995b5e1f7f32aceadc2d467547597f820701d16e",
+    "name": "PKG-MUTANT-SHOP.elf",
+    "size": 45883104,
+    "url": "https://api.github.com/repos/XavyProd-Git/pkg-mutant-shop/releases/assets/623195568"
+   },
+   {
+    "digest": "f8cfcc8823d0ac7b75e8ba88f8171459980c1560a5d3b2e91f54bc67f321466b",
+    "name": "PKG-MUTANT-SHOP.exe",
+    "size": 39090226,
+    "url": "https://api.github.com/repos/XavyProd-Git/pkg-mutant-shop/releases/assets/623195564"
+   }
+  ],
+  "page": "https://github.com/XavyProd-Git/pkg-mutant-shop/releases/tag/v3.97.0",
+  "prerelease": false,
+  "published": "2026-10-08",
+  "tag": "v3.97.0"
+ },
+ "ZiZc3/XPSemu": {
+  "assets": [
+   {
+    "digest": "29c271432859a394d433329c7a58c7df27912ad7fa5551cd2ac0374f834bf716",
+    "name": "helper.elf",
+    "size": 111032,
+    "url": "https://api.github.com/repos/ZiZc3/XPSemu/releases/assets/617880470"
+   },
+   {
+    "digest": "66260113cd7806426689ec19489a4f2c363ee6b99db50d43766d109ba94ce7e6",
+    "name": "PPSA97358.zip",
+    "size": 21791630,
+    "url": "https://api.github.com/repos/ZiZc3/XPSemu/releases/assets/618151350"
+   }
+  ],
+  "page": "https://github.com/ZiZc3/XPSemu/releases/tag/Alpha-2",
+  "prerelease": false,
+  "published": "2026-10-07",
+  "tag": "Alpha-2"
+ },
+ "aydencharles/onionHEN": {
+  "assets": [
+   {
+    "digest": "dd2e78af126d9d115df147a0f2bff6269de7a3eee5a556e06b6c21726a36f087",
+    "name": "OnionHEN.elf",
+    "size": 4675888,
+    "url": "https://api.github.com/repos/aydencharles/onionHEN/releases/assets/618859994"
+   }
+  ],
+  "page": "https://github.com/aydencharles/onionHEN/releases/tag/v0.9.0-beta2",
+  "prerelease": true,
+  "published": "2026-10-07",
+  "tag": "v0.9.0-beta2"
+ },
+ "blackbearreloaded/ProsperoEden": {
+  "assets": [
+   {
+    "digest": "7bf3577defc173b62a8601c1b2d6a6edde8fd93dd8e7f5b5d3338f3072c5d5c2",
+    "name": "ProsperoEden-v1.000.080.zip",
+    "size": 38436136,
+    "url": "https://api.github.com/repos/blackbearreloaded/ProsperoEden/releases/assets/617485918"
+   },
+   {
+    "digest": "8e944ec22abdf79e3cca022ca7181674e38e8a8abbffedfc81a75a52cb066442",
+    "name": "SHA256SUMS",
+    "size": 94,
+    "url": "https://api.github.com/repos/blackbearreloaded/ProsperoEden/releases/assets/617485922"
+   }
+  ],
+  "page": "https://github.com/blackbearreloaded/ProsperoEden/releases/tag/v1.000.080",
+  "prerelease": true,
+  "published": "2026-10-07",
+  "tag": "v1.000.080"
+ },
+ "drakmor/ShadowMountPlus": {
+  "assets": [
+   {
+    "digest": "fc4e5f715e76660ce34bde2adb10eaf1d069cb2cdf06f7a380896dfb62bd0c4a",
+    "name": "shadowmountplus.elf",
+    "size": 2475496,
+    "url": "https://api.github.com/repos/drakmor/ShadowMountPlus/releases/assets/607723394"
+   },
+   {
+    "digest": "30b4ce17346824c84fc1c46ab89bf7f4edc42712a5a2b79f74a2d5fa764a5bd0",
+    "name": "ShadowMountPlus_1.7beta4.zip",
+    "size": 1361003,
+    "url": "https://api.github.com/repos/drakmor/ShadowMountPlus/releases/assets/607722135"
+   }
+  ],
+  "page": "https://github.com/drakmor/ShadowMountPlus/releases/tag/1.7beta4",
+  "prerelease": true,
+  "published": "2026-10-03",
+  "tag": "1.7beta4"
+ },
+ "drakmor/ftpsrv": {
+  "assets": [
+   {
+    "digest": "fba508465a8c892882e88e2834ac2b6c445583b81629257764725528f3f5fd6a",
+    "name": "ftpsrv-ps4.elf",
+    "size": 166072,
+    "url": "https://api.github.com/repos/drakmor/ftpsrv/releases/assets/582136380"
+   },
+   {
+    "digest": "f19ae469b25453a7a4af4529527521d31f143100f18a2c6839666e7121c8bd32",
+    "name": "ftpsrv-ps5.elf",
+    "size": 230640,
+    "url": "https://api.github.com/repos/drakmor/ftpsrv/releases/assets/577536549"
+   }
+  ],
+  "page": "https://github.com/drakmor/ftpsrv/releases/tag/1.16-ng-stable",
+  "prerelease": false,
+  "published": "2026-09-20",
+  "tag": "1.16-ng-stable"
+ },
+ "drakmor/nanoDNS": {
+  "assets": [
+   {
+    "digest": "aa7e9d94e32ef866e40844146330028329f8a8a529244e2ecc319ff9d8b0f5f9",
+    "name": "nanodns-ps4.elf",
+    "size": 99624,
+    "url": "https://api.github.com/repos/drakmor/nanoDNS/releases/assets/582132223"
+   },
+   {
+    "digest": "fcfb7d47c3b295560ea1603dc015f7c4950353ef0faca16428bd425680ef1fc5",
+    "name": "nanodns.elf",
+    "size": 132352,
+    "url": "https://api.github.com/repos/drakmor/nanoDNS/releases/assets/577444042"
+   }
+  ],
+  "page": "https://github.com/drakmor/nanoDNS/releases/tag/0.4",
+  "prerelease": false,
+  "published": "2026-08-04",
+  "tag": "0.4"
+ },
+ "elripalda/Porpoise-Dolphin-Emulator-for-PS5": {
+  "assets": [
+   {
+    "digest": "dbb895934d84a2445dc36cbcabdc0c299359aa76ddb540c8b4791da5e400891c",
+    "name": "Porpoise-2.7.zip",
+    "size": 31201089,
+    "url": "https://api.github.com/repos/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/assets/623317193"
+   }
+  ],
+  "page": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/tag/v2.7",
+  "prerelease": false,
+  "published": "2026-10-08",
+  "tag": "v2.7"
+ },
+ "iHaiDeeZ/DolphinPS4": {
+  "assets": [
+   {
+    "digest": "25c3c284d2b5d1695efa839497a40b2d41c43b5785d2086597d2ea5358784a1a",
+    "name": "DolphinPS4-v04.01.pkg",
+    "size": 191823872,
+    "url": "https://api.github.com/repos/iHaiDeeZ/DolphinPS4/releases/assets/622801441"
+   }
+  ],
+  "page": "https://github.com/iHaiDeeZ/DolphinPS4/releases/tag/v04.01",
+  "prerelease": false,
+  "published": "2026-10-08",
+  "tag": "v04.01"
+ },
+ "itsPLK/ps5-payload-manager": {
+  "assets": [
+   {
+    "digest": "62b3ba2a4937c2afc502f9a4e7242cca538610ebb4ae2800c7c6f72e7f268e7c",
+    "name": "pldmgr_v0.5.2.elf",
+    "size": 2410776,
+    "url": "https://api.github.com/repos/itsPLK/ps5-payload-manager/releases/assets/597943277"
+   }
+  ],
+  "page": "https://github.com/itsPLK/ps5-payload-manager/releases/tag/v0.5.2",
+  "prerelease": false,
+  "published": "2026-09-29",
+  "tag": "v0.5.2"
+ },
+ "itsPLK/ps5-webkit-autoloader": {
+  "assets": [
+   {
+    "digest": "2483d1d7aa552fc7a311c84ab56f01c16cc6256acf64f8aa051aa132daa1e251",
+    "name": "webkit-autoloader-host_v0.6.1.exe",
+    "size": 16138589,
+    "url": "https://api.github.com/repos/itsPLK/ps5-webkit-autoloader/releases/assets/622316531"
+   },
+   {
+    "digest": "722798faaf82d733e00a7ad2658d21323ec22b70755c74018ed5e6ca164fd2c0",
+    "name": "webkit-autoloader-host_v0.6.1.py",
+    "size": 10876498,
+    "url": "https://api.github.com/repos/itsPLK/ps5-webkit-autoloader/releases/assets/622316528"
+   },
+   {
+    "digest": "f662c75a502e4f1bc41b055dcb490625f8222c499ce437dc80f439a3a279e93f",
+    "name": "webkit-autoloader-installer_v0.6.1.elf",
+    "size": 3556608,
+    "url": "https://api.github.com/repos/itsPLK/ps5-webkit-autoloader/releases/assets/622316529"
+   }
+  ],
+  "page": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/tag/v0.6.1",
+  "prerelease": false,
+  "published": "2026-10-08",
+  "tag": "v0.6.1"
+ },
+ "mihawk-99/PS5_RetroArch": {
+  "assets": [
+   {
+    "digest": "9ba38f6608cb3b9c218135c1ba65ffe06da57e3a4a4d532fbf5aedb7663b7175",
+    "name": "PS5_RetroArch-v1.0.0-beta1.zip",
+    "size": 788929239,
+    "url": "https://api.github.com/repos/mihawk-99/PS5_RetroArch/releases/assets/622617319"
+   }
+  ],
+  "page": "https://github.com/mihawk-99/PS5_RetroArch/releases/tag/v1.0.0-beta.1",
+  "prerelease": false,
+  "published": "2026-10-08",
+  "tag": "v1.0.0-beta.1"
+ },
+ "premohq/PS5CEMU-HAR": {
+  "assets": [
+   {
+    "digest": "ade0ee8c2a65c738894fab43805ae55876642bcb6ff289aff95622f5f89cc0bd",
+    "name": "SHA256SUMS.txt",
+    "size": 633,
+    "url": "https://api.github.com/repos/premohq/PS5CEMU-HAR/releases/assets/621686547"
+   }
+  ],
+  "page": "https://github.com/premohq/PS5CEMU-HAR/releases/tag/v3.5.0",
+  "prerelease": false,
+  "published": "2026-10-08",
+  "tag": "v3.5.0"
+ }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File generated from: /home/runner/work/PS-Game-Patch/PS-Game-Patch/patches/xml/Dishonored-Orbis.xml @ 2026-07-12 10:58:36 Sunday (UTC +0000) -->
+<Patch>
+    <TitleID>
+        <ID>CUSA02218</ID>
+        <ID>CUSA02230</ID>
+        <ID>CUSA02231</ID>
+        <ID>CUSA02441</ID>
+    </TitleID>
+    <Metadata Title="Dishonored: Definitive Edition"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="be 01 00 00 00 e8 ?? ?? ?? ?? 41 83 bc ?? ?? ?? ?? ?? ?? 75 ??" Value="be00000000"/>
+            <Line Type="mask" Address="41 8b bc 24 98 00 00 00 e8 ?? ?? ?? ??" Value="b800000000" Offset="+8"/>
+        </PatchList>
+    </Metadata>
+</Patch>
