@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File generated from: /home/runner/work/PS-Game-Patch/PS-Game-Patch/patches/xml/Prototype2.xml @ 2026-07-12 10:58:36 Sunday (UTC +0000) -->
+<Patch>
+    <TitleID>
+        <ID>CUSA01765</ID>
+    </TitleID>
+    <Metadata Title="Prototype 2"
+              Name="Debug Menu"
+              Note="Press thumbstick in Map Menu for Debug Menu"
+              Author="dron3, illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="utf8" Address="0x013fcc9d" Value="RAD_RELEASE"/>
+        </PatchList>
+    </Metadata>
+</Patch>

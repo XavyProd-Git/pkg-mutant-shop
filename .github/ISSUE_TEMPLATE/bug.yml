@@ -1,0 +1,54 @@
+name: Something is wrong
+description: The app did something it should not, or did not do something it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The two most useful things you can give us are **what the app said** and **what the console
+        said**, word for word. An error code (`0x80B2…`) is worth more than a paragraph.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The number under the logo, e.g. 3.86.0. Say it for each device if they differ.
+      placeholder: "3.86.0"
+    validations: { required: true }
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where were you looking at it?
+      multiple: true
+      options: ["The PS5's own browser", "The PS4's own browser", "A PC browser", "A phone", "The exe's window"]
+    validations: { required: true }
+  - type: dropdown
+    id: console
+    attributes:
+      label: Which console
+      options: ["PS5", "PS4", "Both", "Neither - this is the PC side"]
+    validations: { required: true }
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware and jailbreak
+      placeholder: "PS5 12.70, Y2JB + Kstuff / PS4 13.52, GoldHEN"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you pressed, what you expected, and what you got instead.
+    validations: { required: true }
+  - type: textarea
+    id: words
+    attributes:
+      label: The exact words, and any code
+      description: >
+        The message from the app, and the console's own toast if there was one. Error codes matter:
+        0x80B21104 with no install row means out of space, 0x80990033 means the URL had no .pkg on
+        the end, and they are not interchangeable.
+      render: text
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, and whether more than one PC was running the app.

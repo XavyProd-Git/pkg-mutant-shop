@@ -1,0 +1,21 @@
+name: Something is missing
+description: Ask for something the app does not do yet.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: want
+    attributes:
+      label: What you want to be able to do
+      description: Describe the thing you are trying to get done, not the button you imagine.
+    validations: { required: true }
+  - type: textarea
+    id: now
+    attributes:
+      label: How you do it today
+      description: What you do instead right now, and what is bad about that.
+  - type: dropdown
+    id: where
+    attributes:
+      label: Which part of the app
+      multiple: true
+      options: ["The library", "Installing", "Cheats and mods", "Payloads & Homebrews", "Backups", "The companion / PC side", "Something else"]

@@ -1,0 +1,16 @@
+getpid
+memcpy
+memset
+sceKernelClose
+sceKernelGetAppInfo
+sceKernelGetModuleInfo
+sceKernelGetModuleList
+sceKernelLseek
+sceKernelMprotect
+sceKernelOpen
+sceKernelRead
+sceKernelUsleep
+sceKernelWrite
+scePthreadCreate
+scePthreadDetach
+snprintf
